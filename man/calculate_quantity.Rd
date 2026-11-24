@@ -11,15 +11,21 @@ calculate_quantity(quantity, cdata, vdata)
 
 \item{cdata}{A data frame of the calls.}
 
-\item{vdata}{A data frame of the values.}
+\item{vdata}{A data frame of the values. The `value` column should be a
+list column, as made by [asserted_quantity_values()]. A character or
+numeric column is converted to a list column first.}
 }
 \value{
-A data frame
+`vdata` with one row added for `quantity`. Its `value` is the
+  `value` the call returned, kept as an R object (not converted to text),
+  so a scalar, a vector or `NULL` passes to the next call unchanged.
 }
 \description{
 Calculate Quantity
 }
 \examples{
+\dontrun{
 df <- calculate_quantity(quantity, cdata, vdata)
+}
 
 }

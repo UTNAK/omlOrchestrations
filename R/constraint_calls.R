@@ -10,7 +10,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' vdf <- asserted_quantity_values(calls)
+#' }
 #'
 constraint_calls <- function(calls) {
   dfrow <- function(x) data.frame(

@@ -20,6 +20,8 @@ a data frame of constraint calls with the following named elements:
 Constraint Calls
 }
 \examples{
+\dontrun{
 vdf <- asserted_quantity_values(calls)
+}
 
 }

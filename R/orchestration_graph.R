@@ -7,7 +7,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' ograph <- orchestration_graph(edges)
+#' }
 #'
 orchestration_graph <- function(edges) {
   elist <- Reduce(f = c, x = Map(f = function(x) c(x$child$value, x$parent$value), edges), init = c())

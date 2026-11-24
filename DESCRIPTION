@@ -1,7 +1,7 @@
 Package: omlOrchestrations
 Type: Package
 Title: What the Package Does (Title Case)
-Version: 0.1.5
+Version: 0.2.0
 Authors@R: c(
     person(
       "Jane", "Doe",
@@ -17,5 +17,9 @@ LazyData: true
 Imports: 
     dplyr,
     igraph,
+    jsonlite,
     rollupTree
 RoxygenNote: 7.3.3
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

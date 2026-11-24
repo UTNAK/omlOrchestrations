@@ -16,6 +16,8 @@ A data frame
 Calculation Order
 }
 \examples{
+\dontrun{
 o <- calculation_order(ograph)
+}
 
 }

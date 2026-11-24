@@ -16,6 +16,8 @@ An igraph graph.
 Orchestration Graph
 }
 \examples{
+\dontrun{
 ograph <- orchestration_graph(edges)
+}
 
 }

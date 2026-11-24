@@ -7,18 +7,24 @@
 asserted_quantity_values(values)
 }
 \arguments{
-\item{values}{}
+\item{values}{The `results$bindings` of a SPARQL JSON result. Each binding
+has `quantity`, `value` and `unit`.}
 }
 \value{
 a data frame of quatity values with the following named elements:
 - `quantity` IRI of the quantity
-- `value` The value of the quantity
+- `value` The value of the quantity. This is a list column (`I(list(...))`):
+  each element holds one R value, which may be a scalar, a vector or `NULL`.
+  The SPARQL literal is converted to a double here, once, with a correctly
+  rounded parser, so no digits are lost.
 - `unit` The unit of the quantity
 }
 \description{
 Asserted Quantity Values
 }
 \examples{
+\dontrun{
 vdf <- asserted_quantity_values(values)
+}
 
 }

@@ -9,17 +9,23 @@ calculation_wrapper(ograph, vdf, cdf)
 \arguments{
 \item{ograph}{An igraph graph of the orchestration graph.}
 
-\item{vdf}{A data frame of the values.}
+\item{vdf}{A data frame of the values, as made by
+[asserted_quantity_values()].}
 
 \item{cdf}{A data frame of the calls.}
 }
 \value{
-A data frame
+`vdf` with one row added for each calculated quantity. The `value`
+  column is a list column: `result$value[[i]]` is the R value of row `i`
+  (a scalar, a vector or `NULL`). When every value is a scalar,
+  `unlist(result$value)` gives a numeric vector.
 }
 \description{
 Calculation Wrapper
 }
 \examples{
+\dontrun{
 result <- calculation_wrapper(ograph, vdf, cdf)
+}
 
 }
